@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asesoría Técnica & Trámites Urbanos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/servicios.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+
+  <!-- ====== ENCABEZADO ====== -->
+  <header class="navbar">
+    <div class="container nav-content">
+     <a href="../index.html#servicios" class="volver-servicios">
+       <i class="fa-solid fa-arrow-left"></i> Volver a servicios
+     </a>
+  </div>
+  </header>
+
+  <!-- ====== BANNER ====== -->
+  <section id="inicio" class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h2 class="reveal">Regularización de Licencias de Construcción</h2>
+      <p class="reveal">Regulariza tus construcciones existentes y obtén las licencias necesarias de manera ágil <br>y segura.</p>
+    </div>
+  </section>
+
+<section class="container detalle-servicio">
+  <div class="detalle-grid">
+
+    <!-- Columna izquierda -->
+    <div class="detalle-contenido">
+
+      <!-- ¿Qué incluye? -->
+      <div class="detalle-box reveal">
+        <h3>¿Qué incluye?</h3>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Evaluación técnica de la construcción existente</li>
+          <li><i class="fa-solid fa-check"></i> Elaboración de expediente técnico completo</li>
+          <li><i class="fa-solid fa-check"></i> Gestión de licencia de construcción ante la municipalidad</li>
+          <li><i class="fa-solid fa-check"></i> Asesoría en caso de observaciones</li>
+          <li><i class="fa-solid fa-check"></i> Obtención de conformidad de obra</li>
+        </ul>
+      </div>
+
+      <!-- Proceso -->
+      <div class="detalle-box reveal">
+        <h3>Proceso</h3>
+        <ol>
+          <li>Inspección técnica de la edificación</li>
+          <li>Levantamiento de planos según construcción real</li>
+          <li>Elaboración de memoria descriptiva y cálculos</li>
+          <li>Presentación ante la municipalidad</li>
+          <li>Obtención de licencia y conformidad</li>
+        </ol>
+      </div>
+
+      <!-- Tarjetas informativas horizontales -->
+      <div class="info-extra">
+        <div class="info-box reveal">
+          <span class="info-icon">⏱️</span>
+          <span class="info-subtitulo">Tiempo estimado</span>
+          <span class="info-text">Desde 15 días hábiles</span>
+        </div>
+
+        <div class="info-box reveal">
+          <span class="info-icon">👥</span>
+          <span class="info-subtitulo">Asesoría personalizada</span>
+          <span class="info-text">Equipo dedicado a tu caso</span>
+        </div>
+      </div>
+    </div>
+    
+      <!-- Columna derecha: Agendar Cita -->
+      <div id="contenedorCita" class="cita-card sticky-cita reveal">
+
+        <!-- HEADER AZUL -->
+        <div class="cita-header">
+          <h3>Agendar Cita</h3>
+          <div class="cita-buttons">
+            <button id="btnPresencial" class="cita-button active">
+              <i class="fa-solid fa-location-dot"></i> Presencial
+            </button>
+            <button id="btnVirtual" class="cita-button">
+              <i class="fa-solid fa-video"></i> Virtual
+            </button>
+          </div>
+        </div>
+
+        <!-- CONTENIDO DEL FORMULARIO -->
+        <div class="cita-form">
+
+          <!-- FORMULARIO PRESENCIAL -->
+          <div id="formPresencial" class="form-section">
+
+            <div class="form-group">
+              <label class="cita-label">
+                <i class="fa-solid fa-map-pin" style="color:#2563eb;"></i> Selecciona tu distrito
+              </label>
+              <select id="selectPresencial" class="cita-select">
+                <option value="">-- Selecciona una opción --</option>
+                <option value="Ancón">Ancón</option>
+                <option value="Carabayllo">Carabayllo</option>
+                <option value="Comas">Comas</option>
+                <option value="Independencia">Independencia</option>
+                <option value="Los Olivos">Los Olivos</option>
+                <option value="Puente Piedra">Puente Piedra</option>
+                <option value="San Martín de Porres">San Martín de Porres</option>
+                <option value="Santa Rosa">Santa Rosa</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="fechaPresencial" style="display: none;">
+              <label class="cita-label"><i class="fa-solid fa-calendar-days" style="color:#2563eb;"></i> Selecciona una
+                fecha</label>
+              <input type="text" id="inputFechaPresencial" class="cita-input" placeholder="Selecciona una fecha">
+            </div>
+
+            <div id="horariosContainerPresencial" class="horarios hidden">
+              <label class="label-horario"><i class="fa-solid fa-clock" style="color:#2563eb;"></i> Selecciona una hora
+                (8:00 AM - 6:00 PM)</label>
+              <div id="listaHorariosPresencial" class="horas-grid"></div>
+              <p class="info-cupo">Aún disponible - capacidad máxima: 5 personas</p>
+            </div>
+
+            <!-- ================== DATOS PERSONALES PRESENCIAL ================== -->
+            <div id="datosPersonalesPresencial" class="form-section" style="display:none;">
+              <form id="DatosPresencial">
+                <div class="form-group grid-cols-2">
+                  <div>
+                    <label class="cita-label" for="nombrePresencial">Nombre <span
+                        class="asterisco-rojo">*</span></label>
+                    <input type="text" id="nombrePresencial" class="cita-input" placeholder="" required>
+                  </div>
+                  <div>
+                    <label class="cita-label" for="apellidoPresencial">Apellido <span
+                        class="asterisco-rojo">*</span></label>
+                    <input type="text" id="apellidoPresencial" class="cita-input" placeholder="" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="cita-label" for="emailPresencial">Correo electrónico <span
+                      class="asterisco-rojo">*</span></label>
+                  <input type="email" id="emailPresencial" class="cita-input" placeholder="" required>
+                </div>
+
+                <div class="form-group grid-cols-2">
+                  <div>
+                    <label class="cita-label" for="telefonoPresencial">Teléfono <span
+                        class="asterisco-rojo">*</span></label>
+                    <input type="tel" id="telefonoPresencial" class="cita-input" placeholder="" required>
+                  </div>
+                  <div>
+                    <label class="cita-label" for="dniPresencial">DNI <span class="asterisco-rojo">*</span></label>
+                    <input type="text" id="dniPresencial" maxlength="8" class="cita-input" placeholder="" required>
+                  </div>
+                </div>
+
+                <div id="resumenCitaPresencial" class="resumen-cita">
+                  <h4>Resumen de tu cita</h4>
+                  <p>Fecha: <span id="resumenFechaPresencial"></span></p>
+                  <p>Hora: <span id="resumenHoraPresencial"></span></p>
+                  <p>Tipo: Presencial</p>
+                  <p>Distrito: <span id="resumenDistritoPresencial"></span></p>
+                </div>
+
+                <div class="form-group grid-cols-2">
+                  <button type="submit" class="cita-button-submit bg-blue">Agendar Visita</button>
+                  <button type="button" class="cita-button-call bg-green">Llamar Directamente</button>
+                </div>
+            </div>
+            </form>
+          </div>
+
+          <!-- FORMULARIO VIRTUAL -->
+          <div id="formVirtual" class="form-section" style="display:none;">
+
+            <div class="form-group">
+              <label class="cita-label"><i class="fa-solid fa-map-pin" style="color:#2563eb;"></i> Selecciona tu
+                zona</label>
+              <select id="selectVirtual" class="cita-select">
+                <option value="">-- Selecciona una opción --</option>
+                <option value="Lima Norte">Lima Norte</option>
+                <option value="Lima Este">Lima Este</option>
+                <option value="Lima Sur">Lima Sur</option>
+                <option value="Lima Oeste">Lima Oeste</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="fechaVirtual" style="display:none;">
+              <label class="cita-label"><i class="fa-solid fa-calendar-days" style="color:#2563eb;"></i> Selecciona una
+                fecha</label>
+              <input type="text" id="inputFechaVirtual" class="cita-input" placeholder="Selecciona una fecha">
+            </div>
+
+            <div id="horariosContainerVirtual" class="horarios hidden">
+              <label class="label-horario"><i class="fa-solid fa-clock" style="color:#2563eb;"></i> Selecciona una hora
+                (8:00 AM - 6:00 PM)</label>
+              <div id="listaHorariosVirtual" class="horas-grid"></div>
+              <p class="info-cupo">Aún disponible - capacidad máxima: 5 personas</p>
+            </div>
+
+            <div id="datosPersonalesVirtual" class="form-section" style="display:none;">
+              <form id="DatosVirtual">
+                <div class="form-group grid-cols-2">
+                  <div>
+                    <label class="cita-label" for="nombreVirtual">Nombre <span class="asterisco-rojo">*</span></label>
+                    <input type="text" id="nombreVirtual" class="cita-input" placeholder="" required>
+                  </div>
+                  <div>
+                    <label class="cita-label" for="apellidoVirtual">Apellido <span
+                        class="asterisco-rojo">*</span></label>
+                    <input type="text" id="apellidoVirtual" class="cita-input" placeholder="" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="cita-label" for="emailVirtual">Correo electrónico <span
+                      class="asterisco-rojo">*</span></label>
+                  <input type="email" id="emailVirtual" class="cita-input" placeholder="" required>
+                </div>
+
+                <div class="form-group grid-cols-2">
+                  <div>
+                    <label class="cita-label" for="telefonoVirtual">Teléfono <span
+                        class="asterisco-rojo">*</span></label>
+                    <input type="tel" id="telefonoVirtual" class="cita-input" placeholder="" required>
+                  </div>
+                  <div>
+                    <label class="cita-label" for="dniVirtual">DNI <span class="asterisco-rojo">*</span></label>
+                    <input type="text" id="dniVirtual" maxlength="8" class="cita-input" placeholder="" required>
+                  </div>
+                </div>
+
+                <div id="resumenCitaVirtual" class="resumen-cita">
+                  <h4>Resumen de tu cita</h4>
+                  <p>Fecha: <span id="resumenFechaVirtual"></span></p>
+                  <p>Hora: <span id="resumenHoraVirtual"></span></p>
+                  <p>Tipo: Virtual</p>
+                  <p>Distrito: <span id="resumenDistritoVirtual"></span></p>
+                </div>
+
+                <div class="form-group grid-cols-2">
+                  <button type="submit" class="cita-button-submit bg-blue">Agendar Visita</button>
+                  <button type="button" class="cita-button-call bg-green">Llamar Directamente</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+        <div id="mensajeConfirmacion" class="confirmacion hidden"></div>
+      </div>
+
+  </div>
+</section>
+
+   <!-- Flatpickr JS -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/form-switch.js"></script>
+</body>
+</html>
