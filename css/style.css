@@ -37,6 +37,45 @@ html {
   scroll-behavior: smooth;
 }
 
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.whatsapp-btn img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* Tooltip oculto por defecto */
+.whatsapp-tooltip {
+    position: absolute;
+    bottom: 70px; /* encima del botón */
+    right: 0;
+    background-color: #25D366;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+/* Mostrar tooltip al pasar el cursor */
+.whatsapp-btn:hover .whatsapp-tooltip {
+    opacity: 1;
+}
+
 /* ====== MENU ====== */
 .navbar {
   width: 100%;
@@ -281,7 +320,7 @@ html {
 /* === CONTENEDOR PRINCIPAL === */
 .section-carousel {
     width: 100%;
-    padding: 60px 0;
+    padding: 100px 0;
     background: var(--color-gray-50); /* Color suave similar al de tu imagen */
 }
 
@@ -522,13 +561,11 @@ html {
     height: 8px;
 }
 
-
-
   /* ====== SERVICES SECTION ====== */
 
   /* Estado inicial de la sección */
   .services {
-    padding: 80px 0px;
+    padding: 100px 0px;
     background: var(--color-gray-50);
     text-align: center;
   }
@@ -547,6 +584,7 @@ html {
       font-size: 20px;
       line-height: 28px;
       margin-bottom: 3.5rem;
+      text-align: center; 
   }
 
   /* Contenedor de las tarjetas */
@@ -722,6 +760,15 @@ html {
 
 .manager-message { position: relative; padding: 60px 0; overflow: visible; background-color: var(--color-gray-50); }
 
+.manager-message .titulo  {
+      font-size: 48px;
+    line-height: 48px;
+    color: var(--color-blue-900);
+    margin-bottom: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
 /* fondo difuso */
 .manager-bg { position: absolute; inset: 0; pointer-events: none; opacity: .08; }
 .manager-bg-circle {
@@ -817,11 +864,9 @@ html {
 }
 
 
-
-
 /* ====== NOSOTROS SECTION ====== */
 .about {
-  padding: 80px 0px;
+  padding: 100px 0px;
   display: flex;
   justify-content: center;
   align-items: center;

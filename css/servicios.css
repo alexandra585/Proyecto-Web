@@ -414,7 +414,7 @@ body {
 }
 
 .cita-button-submit {
-  padding: 16px 24px;
+  padding: 16px 72px;
   border-radius: 0.5rem;
   background-color: var(--color-blue-600);
   color: var(--color-white);
@@ -461,6 +461,11 @@ body {
   background-color: var(--color-green-700);
   /* hover:bg-green-700 */
   transform: scale(1.05);
+}
+
+.form-group.one-button {
+    display: flex;
+    justify-content: center;
 }
 
 
