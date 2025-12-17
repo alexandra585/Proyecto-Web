@@ -480,7 +480,7 @@ html {
 
 /* ====== HERO SECTION ====== */
 .hero {
-  height: 745px;
+  height: 650px;
   background: url('../img/banner.jpg') center/cover no-repeat;
   position: relative;
   display: flex;
