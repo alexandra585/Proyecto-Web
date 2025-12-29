@@ -120,7 +120,9 @@ body {
 .hero {
   height: 400px;
   margin-top: 56px;
-  background: url('../img/servicios_tarjeta1.webp') center/cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   display: flex;
   align-items: center;
@@ -128,6 +130,7 @@ body {
   text-align: left;
   color: white;
 }
+
 
 .overlay {
   position: absolute;

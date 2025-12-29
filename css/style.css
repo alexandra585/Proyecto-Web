@@ -426,7 +426,7 @@ html {
 /* ====== Seccion Banner ====== */
 .hero {
   height: 650px;
-  background: url('../img/banner2.jpeg') center/cover no-repeat;
+  background: url('../img/banner.jpg') center/cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
@@ -1604,7 +1604,7 @@ html {
 
 /* ====== NOSOTROS SECTION ====== */
 .about {
-  padding: 100px 0px;
+  padding: 100px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1615,7 +1615,7 @@ html {
   display: flex;
   align-items: center;
   gap: 60px;
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
 }
 
@@ -1900,6 +1900,28 @@ html {
   font-weight: 400;
 }
 
+.footer-col .textofo a {
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease
+}
+
+.footer-col .textofo a i {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer-col .textofo a:hover {
+  color: var(--color-blue-300);
+}
+
+.footer-col .textofo a:hover i {
+  color: var(--color-blue-300);
+}
+
 .social-icons {
   display: flex;
   gap: 1rem;
@@ -1908,12 +1930,12 @@ html {
 
 .social-icons a {
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #e0e0e0;
+  color: var(--color-blue-300);
 }
 
 .footer-bottom {
