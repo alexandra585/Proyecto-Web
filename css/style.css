@@ -65,11 +65,9 @@ html {
   border-radius: 50%;
 }
 
-/* Tooltip oculto por defecto */
 .whatsapp-tooltip {
   position: absolute;
   bottom: 70px;
-  /* encima del botón */
   right: 0;
   background-color: #25D366;
   color: white;
@@ -81,12 +79,11 @@ html {
   transition: opacity 0.3s;
 }
 
-/* Mostrar tooltip al pasar el cursor */
 .whatsapp-btn:hover .whatsapp-tooltip {
   opacity: 1;
 }
 
-/* ====== MENU ====== */
+/* Encabezado */
 .navbar {
   width: 100%;
   position: fixed;
@@ -139,7 +136,6 @@ html {
   width: 100%;
 }
 
-/* Para resaltar el activo */
 .menu ul li a.active {
   color: #0057ff;
 }
@@ -160,14 +156,12 @@ html {
   padding: 0px 32px !important;
 }
 
-/* Logo */
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* Logo imagen */
 .logo-img {
   width: 50px;
   height: 50px;
@@ -205,7 +199,6 @@ html {
   color: #0056d2;
 }
 
-/* Botón principal */
 .btn-primary {
   background: var(--color-blue-600);
   color: var(--color-white);
@@ -213,7 +206,6 @@ html {
   border-radius: 6px;
   text-decoration: none;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  /* solo animamos el cambio de escala */
   display: inline-block;
 }
 
@@ -222,11 +214,8 @@ html {
   background-color: var(--color-blue-700);
 }
 
-/* ================================
-   MENU HAMBURGUESA - STYLES COMPLETOS
-   ================================ */
+/*Menu hamburguesa*/
 
-/* --------------- Toggle (botón) --------------- */
 .menu-toggle {
   display: none;
   /* se activa en 768px */
@@ -238,10 +227,6 @@ html {
   /* tamaño del ícono */
 }
 
-
-/* ========================
-   MOBILE MENU (estilos base)
-   ======================== */
 .mobile-menu {
   display: none;
   position: absolute;
@@ -254,27 +239,18 @@ html {
   box-shadow: 0 8px 20px rgba(8, 15, 32, 0.06);
   z-index: 55;
   padding: 8px 0 20px 0;
-
-  /* Estado invisible inicial */
   transform: translateY(-15px);
   opacity: 0;
-
   transition: transform 0.28s cubic-bezier(.25, .1, .25, 1),
-    opacity 0.28s ease;
+  opacity 0.28s ease;
 }
 
-/* Apertura suave */
 .mobile-menu.open {
   display: block;
-  /* aparece */
   transform: translateY(0);
-  /* baja suavemente */
   opacity: 1;
-  /* se desvanece */
 }
 
-
-/* Lista del menú (vertical, full-width) */
 .mobile-menu ul {
   list-style: none;
   margin: 0;
@@ -284,7 +260,6 @@ html {
   gap: 4px;
 }
 
-/* Cada item como botón/elemento full-width */
 .mobile-menu ul li {
   margin: 0;
 }
@@ -295,10 +270,8 @@ html {
   width: 100%;
   text-align: left;
   padding: 12px 16px;
-  /* px-4 py-3 aproximado */
   font-size: 1rem;
   color: #1f2937;
-  /* gray-800 */
   background: transparent;
   border: none;
   text-decoration: none;
@@ -308,16 +281,12 @@ html {
   box-sizing: border-box;
 }
 
-/* Hover / active: fondo azul claro y texto azul (igual Figma) */
 .mobile-menu ul li a:hover,
 .mobile-menu ul li button:hover {
   background: #eff6ff;
-  /* blue-50 */
   color: #1e40af;
-  /* blue-800-ish */
 }
 
-/* Subrayado animado solo para links del menú, excluyendo el botón */
 .mobile-menu ul li a {
   position: relative;
   padding-bottom: 6px;
@@ -339,19 +308,12 @@ html {
   width: calc(100% - 32px);
 }
 
-
-
-/* -------------------------
-   Estados visuales de acceso
-   ------------------------- */
 .mobile-menu a.active,
 .mobile-menu a.active:hover {
   color: #0b5cff;
 }
 
-/* =============================
-   HEADER – 1400px 
-   ============================= */
+/* header responsive*/
 @media (max-width: 1400px) {
 
   .nav-content {
@@ -360,10 +322,6 @@ html {
 
 }
 
-
-/* =============================
-   HEADER RESPONSIVE ≤ 1200px
-============================= */
 @media (max-width: 1200px) {
 
   .nav-content {
@@ -371,10 +329,6 @@ html {
   }
 }
 
-
-/* =============================
-   HEADER RESPONSIVE ≤ 1024px
-============================= */
 @media (max-width: 1024px) {
 
   .nav-content {
@@ -382,12 +336,8 @@ html {
   }
 }
 
-/* =============================
-   🔵 MOBILE MENU 768px
-   ============================= */
 @media (max-width: 768px) {
 
-  /* Mostrar toggle */
   .menu-toggle {
     display: inline-flex;
     align-items: cent er;
@@ -401,12 +351,10 @@ html {
     display: none !important;
   }
 
-  /* muestra el mobile-menu*/
   .mobile-menu {
     display: none;
     position: absolute;
     top: 80px;
-    /* debajo del header */
     left: 0;
     right: 0;
     width: 100%;
@@ -457,20 +405,17 @@ html {
 
 @media (max-width: 480px) {
 
-  /* Icono hamburguesa más accesible */
   .menu-toggle {
     font-size: 28px;
     padding: 10px;
   }
 
-  /* Menú móvil ocupa más pantalla y espacio */
   .mobile-menu {
     width: 100%;
     max-width: none;
     padding: 30px 20px;
   }
 
-  /* Opciones del menú más grandes y con más espacio */
   .mobile-menu ul li a {
     font-size: 18px;
     padding: 14px 0;
@@ -478,10 +423,10 @@ html {
 }
 
 
-/* ====== HERO SECTION ====== */
+/* ====== Seccion Banner ====== */
 .hero {
   height: 650px;
-  background: url('../img/banner.jpg') center/cover no-repeat;
+  background: url('../img/banner2.jpeg') center/cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
@@ -498,12 +443,11 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--color-blue-900);
+  background: #107086;
   opacity: 0.9;
   z-index: 1;
 }
 
-/* Flecha scroll down (parte inferior del banner) */
 .scroll-down {
   position: absolute;
   bottom: 28px;
@@ -519,7 +463,6 @@ html {
   font-size: 26px;
 }
 
-/* Animación de rebote */
 @keyframes floatArrow {
   0% {
     transform: translateX(-50%) translateY(0);
@@ -545,7 +488,6 @@ html {
   padding: 0 1rem;
   animation: fadeUp 0.9s ease-out forwards;
   opacity: 0;
-  /* estado inicial invisible */
 }
 
 @keyframes fadeUp {
@@ -594,22 +536,19 @@ html {
   background-color: var(--color-blue-50);
 }
 
-/* Hero 1400px */
+/* Responsive hero */
 @media (max-width: 1400px) {
 
 }
 
-/* Hero 1200px */
 @media (max-width: 1200px) {
 
 }
 
-/* hero 1024px*/
 @media (max-width: 1024px) {
 
 }
 
-/* hero 768px */
 @media (max-width: 768px) {
 
 .hero-content {
@@ -630,22 +569,18 @@ html {
     }
 }
 
-/* hero 480px*/
 @media (max-width: 480px) {
 }
 
-/* Hero 360px*/
 @media (max-width: 360px) {
 }
 
 
-
-/* === CONTENEDOR PRINCIPAL === */
+/* Seccion Carrusel*/
 .section-carousel {
   width: 100%;
   padding: 100px 0;
   background: var(--color-gray-50);
-  /* Color suave similar al de tu imagen */
 }
 
 .carousel-container {
@@ -654,8 +589,6 @@ html {
   margin: 0 auto;
 }
 
-
-/* === TITULO === */
 .carousel-header {
   text-align: center;
   margin-bottom: 56px;
@@ -669,7 +602,6 @@ html {
   font-weight: 400;
 }
 
-/* === ENVOLTORIO DEL CARRUSEL === */
 .carousel-wrapper {
   overflow: hidden;
   width: 100%;
@@ -684,7 +616,6 @@ html {
   transition: transform 0.4s ease;
 }
 
-/* === TARJETA === */
 .carousel-item {
   min-width: min(410px, 100%);
   height: 400px;
@@ -694,39 +625,32 @@ html {
   flex-shrink: 0;
 }
 
-/* Al pasar el mouse la opacidad sube */
 .carousel-item:hover .card-number {
   opacity: 1;
 }
 
-/* Imagen ocupa toda la tarjetas */
 .carousel-image {
   position: relative;
   width: 100%;
   height: 100%;
-  /* Ajusta el tamaño que quieras */
   background-size: cover;
   background-position: center;
   border-radius: 12px;
   overflow: hidden;
-  /* Para que el overlay no se salga */
   transition: transform 0.4s ease;
 }
 
 .carousel-item:hover .carousel-image {
   transform: scale(1.11);
-  /* zoom suave */
 }
 
-/* Número circular arriba a la derecha */
 .card-number {
   position: absolute;
   top: 16px;
   right: 16px;
   width: 48px;
   height: 48px;
-  background: #1a73e8;
-  /* azul fuerte como Figma */
+  background: #107086;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -747,11 +671,8 @@ html {
   height: 100%;
   transform: translate(-50%, -50%);
   object-fit: cover;
-  /* CLAVE: llena y recorta */
   object-position: center;
-  /* CLAVE: centra como TikTok */
   border-radius: inherit;
-  /* Para igualar esquinas */
 }
 
 .carousel-image::before {
@@ -763,12 +684,9 @@ html {
       rgba(0, 0, 0, 0.50),
       rgba(0, 0, 0, 0));
   z-index: 2;
-  /* Encima del video/imagen pero debajo del texto */
   pointer-events: none;
 }
 
-
-/* Contenido encima de la imagen */
 .carousel-content {
   position: absolute;
   bottom: 0;
@@ -783,22 +701,18 @@ html {
 
 .carousel-item:hover .carousel-content {
   transform: translateY(-10px);
-  /* sube la info */
 }
 
 .line {
   width: 48px;
-  /* normal */
   height: 4px;
   background: var(--color-blue-500);
-  /* azul estilo Figma */
   margin-bottom: 16px;
   transition: width 0.3s ease;
 }
 
 .carousel-item:hover .line {
   width: 94px;
-  /* se agranda al hover */
 }
 
 .content-title {
@@ -813,8 +727,6 @@ html {
   color: #e5e5e5;
 }
 
-
-/* === BOTONES DE NAVEGACIÓN === */
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -824,7 +736,7 @@ html {
   border-radius: 50%;
   border: none;
   background: var(--color-white);
-  color: var(--color-blue-700);
+  color: #13B6CB;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
   cursor: pointer;
   font-size: 16px;
@@ -848,15 +760,13 @@ html {
   right: 10px;
 }
 
-/* === Hover === */
 .carousel-btn:hover {
-  background: var(--color-blue-600);
+  background: #13B6CB;
   color: white;
   transform: translateY(-50%) scale(1.12);
   box-shadow: 0 10px 18px rgba(0, 0, 0, 0.28);
 }
 
-/* === Estado disabled === */
 .carousel-btn:disabled {
   opacity: 0.45;
   cursor: not-allowed;
@@ -864,8 +774,6 @@ html {
   box-shadow: none;
 }
 
-
-/* === DOTS === */
 .carousel-dots {
   margin-top: 25px;
   display: flex;
@@ -880,20 +788,18 @@ html {
   background: #b5c4e3;
   cursor: pointer;
   transition: all 0.3s ease;
-  /* Animación suave */
 }
 
 .dot.active {
-  background: #1a73e8;
+  background: #13B6CB;
   width: 32px;
   height: 8px;
 }
 
-/* ====== Responsive 1400px ====== */
+/* Responsive Carrusel */
 @media screen and (max-width: 1400px) {
   .section-carousel {
     padding: 100px 20px;
-    /* ajusta el padding lateral */
   }
 
   .carousel-container {
@@ -903,7 +809,6 @@ html {
 
   .carousel-wrapper {
     max-width: calc((360px * 3) + (30px * 2));
-    /* 3 tarjetas visibles con gap */
   }
 
   .carousel-item {
@@ -927,11 +832,9 @@ html {
   }
 }
 
-/* ====== Responsive 1200px ====== */
 @media screen and (max-width: 1200px) {
   .section-carousel {
     padding: 100px 16px;
-    /* Padding lateral más ajustado */
   }
 
   .carousel-container {
@@ -941,12 +844,10 @@ html {
 
   .carousel-wrapper {
     max-width: calc((278px * 3) + (30px * 2));
-    /* Ajuste sutil de ancho para 3 tarjetas */
   }
 
   .carousel-item {
     min-width: 278px;
-    /* un poco más estrecho que 360px */
     height: 400px;
   }
 
@@ -966,31 +867,24 @@ html {
   }
 }
 
-/* ====== Responsive 1024px ====== */
 @media screen and (max-width: 1024px) {
   .section-carousel {
     padding: 80px 16px;
-    /* padding lateral más ajustado */
   }
 
   .carousel-container {
     width: 95%;
     margin: 0 auto;
-    /* centrar el carrusel */
   }
 
   .carousel-wrapper {
     max-width: calc((305px * 2) + 30px);
-    /* 2 tarjetas + gap entre ellas */
     margin: 0 auto;
-    /* centrar el wrapper */
   }
 
   .carousel-item {
     min-width: 305px;
-    /* ancho de la tarjeta */
     height: 400px;
-    /* altura de la tarjeta */
   }
 
   .carousel-btn {
@@ -1009,24 +903,19 @@ html {
   }
 }
 
-/* ====== Responsive 768px ====== */
 @media screen and (max-width: 768px) {
   .section-carousel {
     padding: 60px 12px;
-    /* menos padding lateral para móviles */
   }
 
   .carousel-container {
     width: 95%;
     margin: 0 auto;
-    /* centrar el carrusel */
   }
 
   .carousel-wrapper {
     max-width: 90%;
-    /* solo 1 tarjeta visible */
     margin: 0 auto;
-    /* centrar el wrapper */
   }
 
   .carousel-title {
@@ -1036,11 +925,8 @@ html {
 
   .carousel-item {
     width: 100%;
-    /* ocupa todo el ancho del wrapper */
     height: auto;
-    /* altura automática */
     aspect-ratio: 496 / 400;
-    /* mantiene proporción de la tarjeta */
   }
 
   .carousel-btn {
@@ -1059,9 +945,7 @@ html {
   }
 }
 
-/* ====== SERVICES SECTION ====== */
-
-/* Estado inicial de la sección */
+/* Seccion Servicios*/
 .services {
   padding: 100px 0px;
   background: var(--color-gray-50);
@@ -1085,7 +969,6 @@ html {
   text-align: center;
 }
 
-/* Contenedor de las tarjetas */
 .service-list {
   display: flex;
   flex-direction: column;
@@ -1095,7 +978,6 @@ html {
   margin: auto;
 }
 
-/* Cada tarjeta */
 .service-card {
   position: relative;
   border-radius: 12px;
@@ -1117,14 +999,13 @@ html {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Fondo azul exclusivo para tarjetas */
 .card-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--color-blue-800);
+  background: #107086;
   opacity: 0.8;
   z-index: 1;
 }
@@ -1542,13 +1423,13 @@ html {
 .dec-left {
   top: -24px;
   left: -24px;
-  background: var(--color-blue-100);
+  background: #13B6CB;
 }
 
 .dec-right {
   bottom: -24px;
   right: -24px;
-  background: var(--color-blue-600);
+  background: #206B7A;
 }
 
 /* contenido */
@@ -1605,7 +1486,7 @@ html {
 }
 
 .highlight {
-  color: var(--color-blue-500);
+  color: #13B6CB;
   font-weight: 600;
 }
 
@@ -1652,9 +1533,7 @@ html {
 
 .stat-icon i {
   font-size: 24px;
-  /* ajusta el tamaño del icono */
-  color: #1e3a8a;
-  /* azul figma */
+  color: #206B7A;
 }
 
 .stat-number {
@@ -1858,7 +1737,7 @@ html {
 
 .feature i {
   font-size: 1.8rem;
-  color: var(--color-blue-600);
+  color: #13B6CB;
 }
 
 .feature h4 {
@@ -1947,7 +1826,7 @@ html {
 
 /* FOOTER*/
 .footer {
-  background-color: #1B3A9C;
+  background-color: #107086;
   color: white;
   padding: 3rem 2rem 2rem;
   font-size: 0.95rem;

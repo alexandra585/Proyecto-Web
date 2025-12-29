@@ -135,7 +135,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--color-blue-800);
+  background: #107086;
   opacity: 0.8;
   z-index: 1;
 }
@@ -226,7 +226,7 @@ body {
 
 /* ===== CONTENEDOR SUPERIOR (AZUL) ===== */
 .cita-header {
-  background: var(--color-blue-600);
+  background: #107086;
   padding: 24px;
   max-width: 712px;
   border-radius: 14px 14px 0 0;
@@ -251,8 +251,7 @@ body {
   padding: 16px;
   border-radius: 12px;
   background: white;
-  /* Botón inactivo = blanco */
-  color: var(--color-blue-700);
+  color: #107086;
   border: none;
   font-size: 16px;
   display: flex;
@@ -271,7 +270,7 @@ body {
 
 /* ===== BOTÓN ACTIVO (según Figma) ===== */
 .cita-button.active {
-  background: var(--color-blue-500);
+  background: #13B6CB;
   color: white;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
@@ -581,7 +580,7 @@ body {
 
 .info-box {
   flex: 1;
-  background-color: var(--color-blue-600);
+  background-color: #13B6CB;
   color: white;
   padding: 1.5rem;
   border-radius: 8px;
