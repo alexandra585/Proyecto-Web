@@ -54,15 +54,15 @@ $mail = new PHPMailer(true);
 
 try {
     $mail->isSMTP();
-    $mail->Host       = 'smtp.gmail.com'; 
+    $mail->Host       = 'mail.gestionesimb.com'; 
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'josejonathaneleuteriolinan@gmail.com';
-    $mail->Password   = 'ffhnouoptwxrtrjh'; 
+    $mail->Username   = 'admincontacto@gestionesimb.com';
+    $mail->Password   = 'R.[&vTbMqfW}OQQf'; 
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
 
-    $mail->setFrom('josejonathaneleuteriolinan@gmail.com', 'Sistema de Citas');
-    $mail->addAddress('josejonathaneleuteriolinan@gmail.com');
+    $mail->setFrom('admincontacto@gestionesimb.com', 'Sistema de Citas');
+    $mail->addAddress('admincontacto@gestionesimb.com');
 
     $mail->isHTML(true);
     $mail->Subject = "Nueva cita agendada - $tipo";
